@@ -1,4 +1,3 @@
-using Marine_Travel_Project_Backend.Models;
 using Marine_Travel_Project_Backend.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
