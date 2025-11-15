@@ -17,10 +17,19 @@ public class CustomerController
     }
 
     [Function("GetAllCustomers")]
-    public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", Route = "Customer/GetAll")] HttpRequest req)
+    public IActionResult GetAll([HttpTrigger(AuthorizationLevel.Function, "get", Route = "Customer/GetAll")] HttpRequest req)
     {
         var customers = _customerService.Get();
         _logger.LogInformation("C# HTTP trigger function processed a request.");
         return new OkObjectResult(customers);
+    }
+
+    [Function("GetAllCustomersV2")]
+    public IActionResult GetAllV2([HttpTrigger(AuthorizationLevel.Function, "get", Route = "v2/Customer/GetAll")] HttpRequest req)
+    {
+        //TODO dont return db entitiy, map to DTO
+        var customers = _customerService.Get();
+        _logger.LogInformation("C# HTTP trigger function processed a request.");
+        return new OkObjectResult(customers.Values);
     }
 }
