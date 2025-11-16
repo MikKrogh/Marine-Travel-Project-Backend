@@ -10,12 +10,12 @@ internal class CustomerRepository : ICustomerRepository
         //Simulating DB call
         var entities = new Dictionary<Guid, CustomerModel>
         {
-            [Guid.NewGuid()] = new CustomerModel { FullName = "Mikkel Glerup", Title = "Mr." },
-            [Guid.NewGuid()] = new CustomerModel { FullName = "Lasse Jessen", Title = "Mr." },
-            [Guid.NewGuid()] = new CustomerModel { FullName = "Niels Christensen", Title = "Mr." },
-            [Guid.NewGuid()] = new CustomerModel { FullName = "Benjamin Andersen", Title = "Dr." },
-            [Guid.NewGuid()] = new CustomerModel { FullName = "Mikkel kronborg", Title = "Mrs" },
-            [Guid.NewGuid()] = new CustomerModel { FullName = "Malthe Phillipsen", Title = "" },
+            [Guid.NewGuid()] = new CustomerModel { FullName = "Mikkel Glerup", Title = "Mr.", CompanyId = Guid.NewGuid() },
+            [Guid.NewGuid()] = new CustomerModel { FullName = "Lasse Jessen", Title = "Mr.", CompanyId = Guid.NewGuid() },
+            [Guid.NewGuid()] = new CustomerModel { FullName = "Niels Christensen", Title = "Mr.", CompanyId = Guid.NewGuid() },
+            [Guid.NewGuid()] = new CustomerModel { FullName = "Benjamin Andersen", Title = "Dr.", CompanyId = Guid.NewGuid() },
+            [Guid.NewGuid()] = new CustomerModel { FullName = "Mikkel kronborg", Title = "Mrs" , CompanyId = Guid.NewGuid() },
+            [Guid.NewGuid()] = new CustomerModel { FullName = "Malthe Phillipsen", Title = "", CompanyId = Guid.NewGuid() },
         };
         
         foreach (var key in entities.Keys)
