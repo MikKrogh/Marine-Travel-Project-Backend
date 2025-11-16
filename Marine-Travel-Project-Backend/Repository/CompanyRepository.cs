@@ -14,7 +14,7 @@ internal class CompanyRepository
         return new CompanyEntity
         {
             CompanyId = companyId,
-            CompanyName = companyId.ToString().Take(5) + "Test Company A/S"
+            CompanyName = companyId.ToString().Substring(0, 5) + "Test Company A/S"
         };
     }
 }
