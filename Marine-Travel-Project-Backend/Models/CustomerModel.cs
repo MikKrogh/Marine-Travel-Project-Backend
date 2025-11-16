@@ -6,5 +6,5 @@ public class CustomerModel
     public string FullName { get; set; } = string.Empty;
     public string Title {  get; set; }  = string.Empty;
     public Guid CustomerId { get; set; }
-
+    public Guid CompanyId { get; init; }
 }

@@ -11,6 +11,7 @@ var builder = FunctionsApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<ICustomerRepository, CustomerRepository>();
 builder.Services.AddSingleton<ICustomerService, CustomerService>();
+builder.Services.AddSingleton<CompanyRepository>();
 
 builder.ConfigureFunctionsWebApplication();
 
